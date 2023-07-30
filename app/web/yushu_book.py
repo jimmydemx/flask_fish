@@ -1,4 +1,4 @@
-from http_1 import HTTP
+from app.web.http_1 import HTTPReq
 
 
 class YuShuBook:
@@ -8,11 +8,11 @@ class YuShuBook:
     @classmethod
     def search_by_isbn(cls, isbn):
         url = cls.isbn_url.format(isbn)
-        result = HTTP.get(url)  # return dictionary/json
+        result = HTTPReq.get(url)  # return dictionary/json
         return result
 
     @classmethod
     def search_by_keyword(cls, keyword, count=15, start=0):
         url = cls.keyword_url.format(keyword)
-        result = HTTP.get(url)
+        result = HTTPReq.get(url)
         return result

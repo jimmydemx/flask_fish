@@ -1,7 +1,7 @@
 import requests
 
 
-class HTTP:
+class HTTPReq:
     # this will not use self, herein better to define as staticmethod
     @staticmethod
     def get(url, return_json=True):

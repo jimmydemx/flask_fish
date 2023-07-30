@@ -1,8 +1,8 @@
 from flask import jsonify
 
+from app.web import web
 from app.web.helper import is_isbn_or_key
 from app.web.yushu_book import YuShuBook
-from . import web
 
 
 @web.route('/book/search/<q>/<page>')
